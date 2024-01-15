@@ -1,4 +1,4 @@
-class EmRelModel(BertPreTrainedModel):
+class FusionModel(BertPreTrainedModel):
     def __init__(self, config, num_labels, max_ent_cnt, with_naive_feature=False, entity_structure=False):
         super().__init__(config)
         self.num_labels = num_labels
