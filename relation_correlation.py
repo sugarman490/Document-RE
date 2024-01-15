@@ -4,9 +4,9 @@ import torch
 import torch.nn as nn
 from torch_geometric.nn import GATConv
 
-class DocumentRelationExtractor(nn.Module):
+class RelationCorrelation(nn.Module):
     def __init__(self, num_labels, threshold):
-        super(DocumentRelationExtractor, self).__init__()
+        super(RelationCorrelation, self).__init__()
         self.num_labels = num_labels
         self.threshold = threshold
         self.relation_cooccurrence = None
