@@ -7,11 +7,11 @@ from torch_geometric.nn import GATConv
 class RelationCorrelation(nn.Module):
     def __init__(self, num_labels, threshold):
         super(RelationCorrelation, self).__init__()
-        self.num_labels = num_labels
-        self.threshold = threshold
-        self.relation_cooccurrence = None
-        self.relation_graph = None
-        self.gat = None
+        self.num_labels = num_labels #初始化标签数量
+        self.threshold = threshold #初始化阈值
+        self.relation_cooccurrence = None #初始化关系共现矩阵
+        self.relation_graph = None #初始化关系图
+        self.gat = None #初始化图注意力网络
 
     def calculate_relation_cooccurrence(self, train_dataset):
         # Calculate relation co-occurrence matrix based on the training dataset
