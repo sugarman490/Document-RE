@@ -6,7 +6,7 @@ class FusionModel(BertPreTrainedModel):
         self.with_naive_feature = with_naive_feature
         self.feature_size = self.cls_size = 128
 
-        self.roberta = RobertaModel(config, with_naive_feature, entity_structure)
+        # self.roberta = RobertaModel(config, with_naive_feature, entity_structure) # this is an example, choose PreTrainedModel according to your model
         self.head_fc = nn.Linear(config.hidden_size, self.feature_size)
         self.tail_fc = nn.Linear(config.hidden_size, self.feature_size)
 
